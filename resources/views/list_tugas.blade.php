@@ -89,6 +89,24 @@
             </div>
         </div>
 
+        <div class="bg-white shadow rounded-lg overflow-hidden">
+                <div class="px-6 py-4 border-b">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h2 class="text-lg font-semibold">Video</h2>
+                            <p class="text-sm text-gray-500">Halaman daftar video tugas</p>
+                        </div>
+                        <div class="text-sm text-gray-700 font-medium">
+                            {{ isset($videos) ? count($videos) : '-' }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4">
+                    <a href="{{ url('/analisis') }}" class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Buka Halaman Analisis</a>
+                </div>
+            </div>
+
         @if(empty($videos) && empty($persons))
             <div class="mt-6 text-center text-sm text-gray-500">Belum ada tugas yang di-list. Pastikan Anda mengirim data ke view.</div>
         @endif
@@ -96,7 +114,7 @@
     <div class="mt-10 mx-auto text-center">
             <a href="/"
                 class="w-20 text-center mt-6 py-2 px-4 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition duration-150 shadow-md">
-                Kembali
+                Kembalix
             </a>
         </div>
 </body>
